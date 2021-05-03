@@ -15,5 +15,19 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        url: "http://farm.local/graphql",
+        protocol: "http",
+        useACF: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss")],
+      },
+    }
   ],
 };
